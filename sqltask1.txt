@@ -1,0 +1,50 @@
+SQL TASK SUBMISSION
+
+CREATE DATABASE student_db;
+USE student_db;
+
+CREATE TABLE students (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50),
+    age INT,
+    course VARCHAR(50),
+    marks INT
+);
+
+INSERT INTO students (name, age, course, marks) VALUES
+('Ravi', 21, 'BCA', 75),
+('Priya', 22, 'BSc', 82),
+('Arjun', 20, 'BCom', 68),
+('Sneha', 23, 'BTech', 90),
+('Kiran', 21, 'BBA', 72);
+
+SELECT * FROM students;
+
+SELECT name, course FROM students;
+
+UPDATE students
+SET marks = 80
+WHERE name = 'Ravi';
+
+DELETE FROM students
+WHERE name = 'Arjun';
+
+TRUNCATE TABLE students;
+
+SELECT * FROM students WHERE marks = 80;
+SELECT * FROM students WHERE marks != 80;
+SELECT * FROM students WHERE marks <> 80;
+SELECT * FROM students WHERE marks < 80;
+SELECT * FROM students WHERE marks > 70;
+SELECT * FROM students WHERE marks <= 85;
+SELECT * FROM students WHERE marks >= 75;
+
+SELECT * FROM students
+WHERE course = 'BCA';
+
+UPDATE students
+SET course = 'MCA'
+WHERE name = 'Priya';
+
+DELETE FROM students
+WHERE marks < 70;
